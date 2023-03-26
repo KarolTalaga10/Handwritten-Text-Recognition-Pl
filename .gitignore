@@ -131,3 +131,6 @@ dmypy.json
 # data files
 data/photos/
 data/annotations/
+
+# pickle files
+*.pkl
