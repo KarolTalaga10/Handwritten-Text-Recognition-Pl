@@ -16,14 +16,13 @@ if __name__ == "__main__":
         reader = csv.reader(f)
         for row in reader:
             key, *coord = row
-            key = key.split('.', 1)[0]
+            key = key.split(".", 1)[0]
             coord = [eval(i) for i in coord]
             if key not in coord_dct.keys():
                 coord_dct[key] = [coord]
             else:
                 coord_dct[key].append(coord)
-        f.close()
-    
+
     # Coordinates with corresponding words
     with open(os.path.join(PATH_TO_ANNOT, "coordswords.csv"), encoding="utf8") as f:
         reader = csv.reader(f)
@@ -32,19 +31,16 @@ if __name__ == "__main__":
                 key, *coord, word = row
             else:
                 key, *coord = row
-                word = ' '
-            key = key.split('.', 1)[0]
+                word = " "
+            key = key.split(".", 1)[0]
             coord = [eval(i) for i in coord]
             if key not in coord_word_dct.keys():
                 coord_word_dct[key] = [(coord, word)]
             else:
                 coord_word_dct[key].append((coord, word))
-        f.close()
-    
-    with open('coord_dct.pkl', 'wb') as file:
+
+    with open("coord_dct.pkl", "wb") as file:
         pickle.dump(coord_dct, file)
 
-    with open('coord_word_dct.pkl', 'wb') as file:
+    with open("coord_word_dct.pkl", "wb") as file:
         pickle.dump(coord_word_dct, file)
-
-    
