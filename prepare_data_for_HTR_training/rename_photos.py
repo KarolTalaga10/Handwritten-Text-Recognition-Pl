@@ -1,5 +1,4 @@
 from pathlib import Path
-
 import os
 from PIL import Image
 
@@ -27,8 +26,8 @@ def change_extension_folder(folder_path, new_extension):
 
 
 # Example usage
-new_extension = ".png"
-directory_path = Path("../data/dataset/img/FF/FF-FF/")
-
-change_extension_folder(directory_path, new_extension)
+if __name__ == '__main__':
+    new_extension = ".png"
+    directory_path = Path("../data/dataset/img/FF/FF-FF/")
+    change_extension_folder(directory_path, new_extension)
 
