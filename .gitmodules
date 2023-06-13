@@ -1,6 +1,6 @@
 [submodule "WordDetectorNN"]
 	path = WordDetectorNN
-	url = https://github.com/githubharald/WordDetectorNN.git
+	url = https://github.com/JakubSzczudlo/WordDetectorNN
 [submodule "SimpleHTR"]
 	path = SimpleHTR
-	url = https://github.com/githubharald/SimpleHTR.git
+	url = https://github.com/JakubSzczudlo/SimpleHTR
