@@ -5,6 +5,12 @@ __pycache__/
 
 # C extensions
 *.so
+# for photos and xmls
+*.jpg
+*.png
+*.xml
+
+*.pickle
 
 # Pycharm idea file
 .idea/
